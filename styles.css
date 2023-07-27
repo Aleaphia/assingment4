@@ -1,0 +1,171 @@
+/*
+    I certify that the CSS file I am submitting is all my own work.
+    None of it is copied from any source or any person.
+    Signed: Shoshana Altman.
+*/
+/*
+    Author: Shoshana Altman
+    Date: 7/24/2023
+    Class: CSC135
+    Project: Assignment 4
+    Description: Create a Web Page about Accessibility
+*/
+/* Styling for whole document -- add comments throughout your file */
+body {
+    background-color: rgb(248, 233, 182);
+}
+/*Navigation header*/
+header {
+    background-color: rgb(50, 42, 36);
+    color: #FFC107;
+    margin:0;
+}
+nav ol {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+nav li {
+    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+
+    padding: 0.5em;
+    margin: 1em;
+    border: solid;
+} 
+
+header a:link {
+    color: rgb(247, 217, 112);
+}
+header a:visited {
+    color: rgb(202, 190, 149);
+}
+header a:hover {
+    color: rgb(255, 200, 0);
+}
+header a:active {
+    color: rgb(247, 217, 112);
+    background-color: rgb(113, 95, 81);
+}
+
+/*Main*/
+    /*General Styles*/
+    h1{
+        text-align: center;
+        font-size: 4rem;
+
+        margin:0;
+    }
+    h2 {
+        border-bottom: solid rgb(50, 42, 36);
+        font-size:2.5rem;
+    }
+    p {
+        font-size:1.25rem;
+    }
+    section{
+        padding: 10px;
+    }
+
+    /*Pour Definitions*/
+    section#pourDef {
+        padding: 10px;
+    }
+    #pourDef dl {
+        display: flex;
+        flex-flow: row wrap;
+
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    #pourDef dt, #pourDef dd {
+        box-sizing: border-box;
+        margin: 5px 0;
+        padding: 5px;
+
+    }
+    #pourDef dt {
+        flex: 0 0 30%;      /*30% flex-basis allows dt to grow with page*/
+        min-width: 220px;   /*min 220px min-width prevents unbalanced shrinkage*/
+    }
+    #pourDef dd {
+        flex: 0 1 70%;
+        margin-left: auto;
+    }
+        /*List colors.
+        color palette was designed using a site for creating color-blind friendly palettes
+        (https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23CA8226)*/ 
+        dl .p{
+            background-color: #de427b;
+        }
+        dl .o{
+            background-color: #4fa1e9;
+        }
+        dl .u{
+            background-color: #fed24e;
+        }
+        dl .r{
+            background-color: #CA8226;
+        }
+
+        #pourDef dt::first-letter {
+            font-size: 6rem;
+        }
+    /* Image styles */
+    img{
+        max-width:100%;
+    }
+    p.img {
+        width:100%;
+        text-align: center;
+        background-color: rgb(255, 248, 225);
+        padding: 10px;
+        margin:0;
+    }
+    /* Table styles */
+    th, td, table{
+        border: solid 1px;
+    }
+    table {
+        font-size: 1.25rem;
+
+        background-color: rgb(255, 248, 225);
+    }
+    th {
+        background-color: rgb(50, 42, 36);
+        color: #FFC107;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+    caption{
+        font-size: 1.5rem;
+    }
+    /* Form styles */
+    fieldset{
+        border: none;
+        background-color: rgb(255, 248, 225);
+        margin: 1em;
+    }
+    legend{
+        background-color: rgb(50, 42, 36);
+        color: #FFC107;
+        font-size: 1.5rem;
+        font-weight: normal;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    ul {
+        list-style-type: none;
+        font-size: 1.25rem;
+    }
+    textarea {
+        width: 40rem;
+        height: 3rem;
+        margin-left: 2rem;
+    }
+    /* Miscellaneous */
+    dfn {
+        font-style: normal;
+    }

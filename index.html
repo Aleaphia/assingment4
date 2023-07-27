@@ -1,0 +1,158 @@
+<!--
+    I certify that the HTML file I am submitting is all my own work.
+    None of it is copied from any source or any person.
+    Signed: Shoshana Altman. Dated: 07/21/2023
+-->
+<!--
+    Author: Shoshana Altman
+    Date: 07/21/2023
+    Class: CSC135
+    Project: Assignment 3
+    Description: Flexbox shopping site
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>@import url("styles.css");</style>
+    <title>Webpage Accessibility </title>
+</head>
+
+<body>
+    <header id="head">
+    <!--Navigation menu-->
+        <nav>
+            <ol>
+                <li><a href="#main">Skip Navigation</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#pourDef">What is accessibility</a></li>
+                <li><a href="#exampleImage">Example 1: Images</a></li>
+                <li><a href="#exampleTable">Example 2: Tables</a></li>
+                <li><a href="#exampleForm">Example 3: Forms</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1><img src="images/accessibility.png" alt="Web Accessibility"></h1>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p> This website will introduce the basic principles of webpage accessibility.
+            It will also include several example section with accessibility measure integrated into the html markup.</p>
+            <p><a href="#head">Return to Navigation</a></p>
+        </section>
+
+        <!--POUR-->
+        <section id="pourDef">
+            <h2>What is accessibility and why is it important?</h2>
+            <p> 
+                Webpage accessibility is the practice of making a webpage accessible through as many platforms as possible.
+                Four components of accessibility should be considered: an accessible webpage must be perceivable, operable, understandable, and robust (POUR).
+            </p>
+            <dl>
+                <dt class="p"><dfn> Perceivable </dfn></dt>
+                <dd class="p"> Webpages must be designed so that the user can perceive all webpage content with one or more of their senses. </dd>
+
+                <dt class="o"><dfn> Operable </dfn></dt>
+                <dd class="o"> Interactive components of a webpage must be usable and not require interaction outside the user's abilities. </dd>
+
+                <dt class="u"><dfn> Understandable </dfn></dt>
+                <dd class="u"> Webpage components must be comprehensible to the user such that they are able to understand and use the website’s content. </dd>
+
+                <dt class="r"><dfn> Robust </dfn></dt>
+                <dd class="r"> Webpages must be widely compatible with different user agents and other interface technologies. </dd>
+            </dl>
+            <p><a href="#head">Return to Navigation</a></p>
+        </section>
+
+        <!--Image-->
+        <section id="exampleImage">
+            <h2>Accessibility example 1: Images</h2>
+            <p>
+                Images are a relatively simple webpage component; however they heavily rely on a single sense: vision.
+                For vision impaired users, image elements (img) are not <strong>perceivable</strong>.
+                The alt attribute gets around this limitation by specifying a text alternative to an image.
+                This text should be a descriptive alternative that replaces any necessary component of the image.
+            </p>
+            <p> The following example table incorporates a descriptive alt attribute to promote accessibility: </p>
+            <p class="img">There are five types of accessibility fields that may impact user ability to interact with a webpage:<br><br>
+                <img src="images/accessibilityFields.jpg" alt="Cognitive, Visual, Auditory, Motor, Speech"></p>
+            <p><a href="#head">Return to Navigation</a></p>
+        </section>
+
+        <!--Table-->
+        <section id="exampleTable">
+            <h2>Accessibility example 2: Tables</h2>
+            <p> Careful table design is important to make a table <strong>understandable</strong>. 
+                Outside a webpage environment, consider the layout and flow of your table.
+                Try to keep your tables as simple as possible without losing their meaning. <br>
+                When marking up your table, use the caption element to give your table a title.
+                Use table header elements (th) when applicable, and connect each table header with their domain using the scope attribute of table headers. 
+                or the header attribute of table data cell elements (td).
+                These accessibility measures increase compatibility for screen readers and brail displays, which makes your site more
+                <strong>robust</strong>.
+            </p>
+            <p> The following example table incorporates a caption and the scope elements to promote accessibility: </p>
+            <table><caption>Accommodations</caption>
+                <tr><th scope="row">Impairment</th> <th scope="row">Assistive Technology</th> <th scope="row">Considerations</th></tr>
+                <tr><td>Visual</td>
+                    <td>Screen readers, Braile display, Screen magnifier</td>
+                    <td>Individuals with impaired sight may not be able to see content displayed on the screen.
+                        To make a page accessible to vision impaired users, it is important to make sure any visual information (e.g., an image) 
+                        has an alternative description that can be read by a screen reader or displayed as braile.</td>
+                </tr>
+                <tr><td>Auditory</td>
+                    <td>Subtitled videos, Transcripts</td>
+                    <td>Individuals with hearing impairments may not be able to hear any audio component of your webpage.
+                        To make a page accessible to hearing impaired users, include transcripts or subtitles for any audio component. </td>
+                </tr>
+                <tr><td>Motor</td>
+                    <td>Modified computer controls</td>
+                    <td>Individuals with impaired motor control may have modified computer control.
+                        To make a page accessible to motor impaired users, make sure your webpage is easily controlled.
+                        All webpages should be navigable with only a keyboard. </td>
+                </tr>
+            </table>
+            <p><a href="#head">Return to Navigation</a></p>
+        </section>
+
+        <!--Form-->
+        <section id="exampleForm">
+            <h2>Accessibility example 3: Forms</h2>
+            <p>
+                Tables can be a tricky component of webpages. They require user interaction, so it is vital they are <strong>operable</strong>.
+                It is also vital to make forms <strong>understandable</strong>. 
+                One accessibility measure that can increase user comprehension is the fieldset and legend elements.
+                Fieldset is used to subdivide your form into distinct sections, and the legend element can be used to label these sections.
+                To make a page more compatible with screen readers and brail displays, and therefore more <strong>robust</strong>,
+                the label element can be used to clarify the relationship between fields and text by implicitly or explicitly grouping them together.
+            </p>
+            <p> The following example table incorporates a fieldset, legend, and label elements to promote accessibility: </p>
+            <form>
+                <fieldset> <legend>Accessibility Quiz</legend>
+                    <p><label>Q1: What does the O in POUR stand for? <input type="text" name="q1"></label></p>
+
+                    <p>Q2: Which of the following may affect user ability to interact with a webpage? (Select all that apply) </p>
+                    <ul>
+                        <li><label><input type="checkbox" name="q2" value="cog">Cognitive impairment</label></li>
+                        <li><label><input type="checkbox" name="q2" value="hea">Hearing impairment</label></li>
+                        <li><label><input type="checkbox" name="q2" value="vis">Visual impairment</label></li>
+                        <li><label><input type="checkbox" name="q2" value="mot">Motor impairment</label></li>
+                    </ul>
+                    
+                    <p><label>Q3: Why is web accessibility important? <br><textarea name="q3"></textarea></label></p>
+                </fieldset>
+                <fieldset><legend>Accessibility Agreement and Submission</legend>
+                    <p><label>I <input type="text" name="name" placeholder="your name"> promise to incorporate accessibility measures into my webpages. </label></p>
+                    <p><input type="submit">
+                    <input type="reset"></p>
+                </fieldset>
+            </form>
+            <p><a href="#head">Return to Navigation</a></p>
+        </section>
+    </main>
+</body>
+</html>
